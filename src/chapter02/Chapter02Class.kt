@@ -53,4 +53,5 @@ fun main(args: Array<String>) {
     println("rgb::${Color.BLUE.rgb()}")
     println("getRGB::${Color.RED.getRGB(Color.BLUE)}")
     println(eval(Sum(Sum(Num(1),Num(2)), Num(4))))
+    println(1 in 5 .. 3)
 }
