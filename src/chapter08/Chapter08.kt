@@ -24,6 +24,10 @@ fun getNumber(): Int{
     return 111
 }
 
+infix fun String.infixTest(index: Int){
+    print(this[index])
+}
+
 fun main(args: Array<String>) {
     var canReturnNull:(Int, Int) -> Int? = { x,y -> null }
     println(canReturnNull(1, 2))
@@ -36,6 +40,11 @@ fun main(args: Array<String>) {
     var test: Test? = null
     test?.test = getNumber()
     println(test?.test)
+    //println(test?.test > 0)
     val order = Order(1)
     //order.itemCount = 2
+    val string2 = "123456"
+    println("---------------")
+    string2.infixTest(1)
+    string2 infixTest 1
 }
