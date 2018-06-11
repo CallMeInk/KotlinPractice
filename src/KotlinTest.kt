@@ -34,5 +34,5 @@ fun main(args: Array<String>) {
     x = 2
     println(string)
     println("${string.replace("is", "was")}, but now is $string")
-
+    val jsonString = "[{1:2},{2:3}]"
 }

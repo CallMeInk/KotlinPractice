@@ -6,7 +6,7 @@ fun perform(callback: (content: String) -> Int){
 
 enum class Delivery{ STANSTARD, EXPEDITED}
 
-class Order(val itemCount: Int)
+open class Order(val itemCount: Int)
 
 class Test(){
     var test:Int = 1
@@ -28,6 +28,18 @@ infix fun String.infixTest(index: Int){
     print(this[index])
 }
 
+interface IInterfaceNotNullTest{
+    fun test(string: String)
+}
+
+abstract class Adapter<T : Order>{
+    fun methodToOverride(t: T){}
+}
+
+class SonAdapter : Adapter<Order>(){
+
+}
+
 fun main(args: Array<String>) {
     var canReturnNull:(Int, Int) -> Int? = { x,y -> null }
     println(canReturnNull(1, 2))
@@ -47,4 +59,7 @@ fun main(args: Array<String>) {
     println("---------------")
     string2.infixTest(1)
     string2 infixTest 1
+
+    println(null is Order)
+    //println(if (null) 0 else 1)
 }
